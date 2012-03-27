@@ -17,6 +17,8 @@ module Picasa
         attributes[:id] = album["id"][1]
         attributes[:title] = album["title"][0]["content"]
         attributes[:summary] = album["summary"][0]["content"]
+        attributes[:published] = album["published"][0]["content"]
+        attributes[:updated] = album["updated"][0]["content"]
         attributes[:photos_count] = album["numphotos"][0].to_i
         attributes[:photo] = album["group"][0]["content"]["url"]
         attributes[:thumbnail] = album["group"][0]["thumbnail"][0]["url"]
